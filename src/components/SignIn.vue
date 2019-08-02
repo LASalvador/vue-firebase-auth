@@ -32,7 +32,7 @@ export default {
             firebase.auth().createUserWithEmailAndPassword(this.email, this.senha).then(
                 (user) => {
                     console.log(user);
-                    window.location.href = 'http://localhost:8080/';
+                    this.$router.push('home');
                 },
                 (err) => {
                     alert('OPS' + err.message);

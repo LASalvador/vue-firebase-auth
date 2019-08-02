@@ -17,7 +17,7 @@ export default {
     methods:{
         sair(){
             firebase.auth().signOut().then(() => {
-                window.location.href = 'http://localhost:8080/login'
+               this.$router.push('login');
             })
         }
     }

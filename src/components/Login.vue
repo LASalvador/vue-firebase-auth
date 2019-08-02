@@ -36,7 +36,7 @@ export default {
         entrar() {
             firebase.auth().signInWithEmailAndPassword(this.email, this.senha).then(
                 (user) => {
-                    window.location.href = 'http://localhost:8080/';
+                    this.$router.push('home');
                     alert(`Bem Vindo, ${{email}}`);
                 },
                 (err) => {

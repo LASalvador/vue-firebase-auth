@@ -22,15 +22,7 @@ router.beforeEach((to, from,next) => {
 });
 
 
-var firebaseConfig = {
-  apiKey: "AIzaSyAAMO0TMcmXCPM3JVRrdiUb2b7epc7KoQo",
-  authDomain: "vue-firebase-e8c5d.firebaseapp.com",
-  databaseURL: "https://vue-firebase-e8c5d.firebaseio.com",
-  projectId: "vue-firebase-e8c5d",
-  storageBucket: "",
-  messagingSenderId: "803030173782",
-  appId: "1:803030173782:web:cdc73778935b2eb0"
-};
+var firebaseConfig = require('./firebase');
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 let app = ''
